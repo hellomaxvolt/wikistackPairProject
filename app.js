@@ -19,6 +19,9 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(express.urlencoded({ extended: false }));
 
+app.use("/wiki", require("./routes/wiki"))
+
+
 app.get("/", (req, res) => {
   res.send(main(''));
 });
